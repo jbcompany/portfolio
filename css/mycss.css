@@ -1,6 +1,20 @@
-.footer-social svg {
-  margin-right: 8px;
+.footer-social {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  margin-right: 50px;
 }
-.footer-social a {
-  margin-right: 16px;
+
+.footer-social:last-child {
+  margin-right: 0;
+}
+
+.footer-social svg {
+  margin-right: 0;
+}
+
+/* Avoid any accidental separators injected by other link styles. */
+.footer-social + .footer-social::before,
+.footer-social + .footer-social::after {
+  content: none !important;
 }
