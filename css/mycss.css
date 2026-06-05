@@ -18,3 +18,23 @@
 .footer-social + .footer-social::after {
   content: none !important;
 }
+
+.skills-carousel-img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+#skillsCarousel .carousel-control-prev,
+#skillsCarousel .carousel-control-next {
+  width: 4%;
+}
+
+#skillsCarousel .carousel-control-prev-icon,
+#skillsCarousel .carousel-control-next-icon {
+  filter: invert(1) grayscale(1);
+}
