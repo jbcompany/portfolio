@@ -76,25 +76,26 @@
             </nav>
         </header>
         <main>
-            <?php
-$conexion=mysqli_connect("localhost","root","","prueba") or die("problemas de conexion");
+            <div class="container">
+                <?php
+                    $conexion=mysqli_connect("localhost","root","","prueba") or die("problemas de conexion");
 
-$registros = mysqli_query($conexion,"SELECT nombre,email,telefono,servicios,mensaje FROM prueba ") or die("problema en el select: " . mysqli_error($conexion));
+                    $registros = mysqli_query($conexion,"SELECT nombre,email,telefono,servicios,mensaje FROM prueba ") or die("problema en el select: " . mysqli_error($conexion));
 
-while($reg=mysqli_fetch_array($registros)){
-echo "Nombre:" . $reg['nombre'] . "<br>";
-echo "su email: " . $reg['email'] ."<br>";
-echo "telefono: " . $reg['telefono'] . "<br>";
-echo "servicio: " . $reg['servicios'] . "<br>";
-echo "Mensaje: " . $reg['mensaje'] . "<br>";
-echo "<br>";
-echo "<hr>";
+                    while($reg=mysqli_fetch_array($registros)){
+                        echo "Nombre:" . $reg['nombre'] . "<br>";
+                        echo "su email: " . $reg['email'] ."<br>";
+                        echo "telefono: " . $reg['telefono'] . "<br>";
+                        echo "servicio: " . $reg['servicios'] . "<br>";
+                        echo "Mensaje: " . $reg['mensaje'] . "<br>";
+                        echo "<br>";
+                        echo "<hr>";
 
-}
+                    }
 
-
-mysqli_close($conexion);
-?> 
+                    mysqli_close($conexion);
+                ?> 
+            </div>
         </main>
         <footer>
             <!-- place footer here -->

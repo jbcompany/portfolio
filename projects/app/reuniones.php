@@ -72,7 +72,28 @@
                 </div>
             </nav>
         </header>
-        <main></main>
+        <main>
+            <div class="container">
+                <?php
+                    $conexion=mysqli_connect("localhost","root","","prueba") or die("problemas de conexion");
+
+                    $registros = mysqli_query($conexion,"SELECT nombre,correo,fecha_reunion,hora_reunion FROM agenda") or die("problema en el select: " . mysqli_error($conexion));
+
+                    while($reg=mysqli_fetch_array($registros)){
+                        echo "Nombre:" . $reg['nombre'] . "<br>";
+                        echo "su email: " . $reg['correo'] ."<br>";
+                        echo "fecha de la reunion: " . $reg['fecha_reunion'] . "<br>";
+                        echo "hora de la reunion: " . $reg['hora_reunion'] . "<br>";
+                        echo "<br>";
+                        echo "<hr>";
+
+                    }
+                    mysqli_close($conexion);
+                ?> 
+           </div>
+            
+            
+        </main>
         <footer>
             <!-- place footer here -->
         </footer>
