@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en" data-bs-theme="light">
     <head>
-        <title>Contact</title>
+        <title>My Projects</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -39,7 +39,7 @@
                         <form class="d-flex my-2 my-lg-0">
                             <ul class="navbar-nav me-auto mt-2 mt-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" href="myprojects.html" aria-current="page">Projects</a>
+                                <a class="nav-link active" href="projects.html" aria-current="page">Projects</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="about.html">About Me</a>
@@ -51,36 +51,122 @@
                         </form>
                     </div>
                 </div>
-            </nav>
+            </nav> 
         </header>
-        <main class="min-vh-100 bg-light d-flex justify-content-center align-items-center">
-            <div
-                class="row justify-content-center align-items-center g-2"
-            >
-                <div class="col">Column</div>
-                <div class="col">
-                    <form action="conectar.php" method="POST">
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" name="nombre" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" name="mensaje" rows="3" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send</button>
-                </div>
-            </div>
+        <main class="min-vh-100 bg-light py-5">
+            <div class="container">
+            <div class="w-100 p-5 text-center rounded-3">
+                <h1>My Projects</h1>
+                <br />
+                <p class="mb-3">Take a look at some of my recent projects:</p>
+                <br />
             
-            <div class="w-100 p-5 bg-body-secondary text-center rounded-3" style="height: 60vh;">
-                <br />
-                <p class="mb-3">Feel free to reach out to me for any inquiries or collaborations.</p>
-                <br />
-                <a class="btn btn-primary" href="#" role="button">Contact Me</a>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" style="margin-left: 10%; margin-right: 10%;">
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="img/logoMelia.png" class="card-img-top" alt="..." style="height: 200px; object-fit: contain;">
+                            <div class="card-body">
+                                <h5 class="card-title"><b>Operations HD Supervisor</b></h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                                <a href="https://www.melia.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Go to Melia</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="img/sm2plexus.jpeg" class="card-img-top" alt="..." style="height: 200px; object-fit: contain;">
+                            <div class="card-body">
+                                <h5 class="card-title"><b>Developer</b></h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                                <a href="https://www.plexus.es" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Go to Plexus</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="img/sonespases.png" class="card-img-top p-3" alt="..." style="height: 200px; object-fit: contain;">
+                            <div class="card-body">
+                                <h5 class="card-title"><b>HD Supervisor</b></h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                                <a href="https://www.hospitalsonespases.es/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Go to Hospital Son Espases</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="img/globalia.jpg" class="card-img-top p-3" alt="..." style="height: 200px; object-fit: contain;">
+                            <div class="card-body">
+                                <h5 class="card-title"><b>Java Developer</b></h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                                <a href="https://www.globalia.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Go to Globalia</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="img/Travelplan_Logo.jpg" class="card-img-top p-3" alt="..." style="height: 200px; object-fit: contain;">
+                            <div class="card-body">
+                                <h5 class="card-title"><b>Java Developer</b></h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                                <a href="https://www.travelplan.es" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Go to Travelplan</a>
+                            </div>
+                        </div>
+                    </div>
+                   <div class="col">
+                        <div class="card h-100">
+                            <img src="img/soltour.png" class="card-img-top p-3" alt="..." style="height: 200px; object-fit: contain;">
+                            <div class="card-body">
+                                <h5 class="card-title"><b>Junior Java Developer</b></h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                                <a href="https://www.soltour.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Go to Soltour</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="img/takearoute.jpg" class="card-img-top" alt="..." style="height: 200px; object-fit: contain;">
+                            <div class="card-body">
+                                <h5 class="card-title"><b>Software Dev & Tech Lead</b></h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                                <a href="https://www.facebook.com/takearoute/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Go to Take a Route</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="img/coming2.jpeg" class="card-img-top" alt="..." style="height: 200px; object-fit: contain; ">
+                            <div class="card-body">
+                                <h5 class="card-title solid"><b>Senior Java & Tech Lead</b></h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                                <a href="https://www.pinero.com/es/services/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Go to grupo Piñero</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">                    
+                        <div class="card h-100">
+                            <img src="img/solbus.png" class="card-img-top" alt="..." style="height: 200px; object-fit: contain;">
+                            <div class="card-body">
+                                <h5 class="card-title"><b>Senior Java & Tech Lead</b></h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                                <a href="https://www.pinero.com/es/services/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Go to grupo Piñero</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="img/bahia_principe.png" 
+                                    class="card-img-top p-3" alt="..." 
+                                    style="height: 200px; object-fit: contain; ">
+                            <div class="card-body">
+                                <h5 class="card-title"><b>Senior Java & Tech Lead</b></h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                                <a href="https://www.bahia-principe.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Go to Bahia Principe</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
             </div>
         </main>
         <footer class="bg-light py-3">
@@ -133,19 +219,5 @@
             integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
             crossorigin="anonymous"
         ></script>
-        <script>
-            const params = new URLSearchParams(window.location.search);
-            const status = params.get("status");
-
-            if (status === "ok") {
-                alert("Mensaje enviado correctamente.");
-            } else if (status === "error") {
-                alert("No se pudo enviar el mensaje. Intenta de nuevo.");
-            }
-
-            if (status) {
-                window.history.replaceState({}, document.title, window.location.pathname);
-            }
-        </script>
     </body>
 </html>
