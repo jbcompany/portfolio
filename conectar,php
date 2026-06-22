@@ -1,0 +1,9 @@
+<?php
+$conexion = mysqli_connect("localhost", "root", "", "prueba") or die("Connection failed: " . mysqli_connect_error());
+
+mysqli_query($conexion, "INSERT INTO prueba (nombre, email, mensaje) 
+VALUES ('".$_POST['nombre']."', '".$_POST['email']."', '".$_POST['mensaje']."')") or die("Error: " . mysqli_error($conexion));
+mysqli_close($conexion);
+
+$echo "Mensaje enviado correctamente";
+?>

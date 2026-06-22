@@ -53,174 +53,34 @@
                 </div>
             </nav>
         </header>
-        <main class="min-vh-100 bg-light d-flex justify-content-center align-items-center py-4">
-            <div class="container">
-                <div class="row justify-content-center align-items-stretch g-4 mb-3">
-                    <div class="col-12 col-md-6">
-                        <div class="p-5 bg-body-secondary rounded-3 h-100">
-                            <h1 class="mb-0">Get in Touch</h1>
-                            <form action="agenda.php" method="post">
-                                <div class="mb-3">
-                                <label for="" class="form-label">Nombre</label>
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    name="nombre"
-                                    id="nombre"
-                                    aria-describedby="helpId"
-                                    placeholder=""
-                                />
-                            
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="" class="form-label">Correo</label>
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        name="correo"
-                                        id="correo"
-                                        aria-describedby="helpId"
-                                        placeholder=""
-                                    />
-                                </div>
-                                <div class="mb-3">
-                                    <label for="" class="form-label">Fecha de la Reunion</label>
-                                    <input
-                                        type="date"
-                                        class="form-control"
-                                        name="fecha_reunion"
-                                        id="fecha_reunion"
-                                        aria-describedby="helpId"
-                                        placeholder=""
-                                    />
-                                    
-                                    
-                                </div>
-                            
-                                <div class="mb-3">
-                                    <label for="" class="form-label">Hora</label>
-                                    <input
-                                        type="time"
-                                        class="form-control"
-                                        name="hora_reunion"
-                                        id="hora_reunion"
-                                        aria-describedby="helpId"
-                                        placeholder=""
-                                    />
-                                
-                                </div>
-                                
-                                <button type="submit" class="btn btn-primary">Registrar Reunion</button>
-                            </form>
+        <main class="min-vh-100 bg-light d-flex justify-content-center align-items-center">
+            <div
+                class="row justify-content-center align-items-center g-2"
+            >
+                <div class="col">Column</div>
+                <div class="col">
+                    <form action="conectar.php" method="POST">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" name="nombre" required>
                         </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <div class="p-5 bg-body-secondary rounded-3 h-100">
-                            <h1 class="mb-3 text-center">Contact Me</h1>
-                            <form action="conectar.php" method="post">
-                                <div class="mb-3">
-                                    <label for="" class="form-label">Nombre</label>
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        name="nombre"
-                                        id="nombre"
-                                        aria-describedby="helpId"
-                                        placeholder=""/>
-                                </div>
-                                
-                                <div class="mb-3">
-                                    <label for="" class="form-label">Email</label>
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        name="email"
-                                        id="email"
-                                        aria-describedby="helpId"
-                                        placeholder=""
-                                    />
-                                
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="" class="form-label">Telefono</label>
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        name="telefono"
-                                        id="telefono"
-                                        aria-describedby="helpId"
-                                        placeholder=""
-                                    />
-                                
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="servicios" class="form-label">Servicios</label>
-                                    <select
-                                        class="form-select form-select-lg"
-                                        name="servicios"
-                                        id="servicios"
-                                    >
-                                        <option selected>Su pedido</option>
-                                        <option value="WWW">Web Corporativa</option>
-                                        <option value="WEBAPP">Aplicacion web</option>
-                                        <option value="MOBILEAPP">Aplicacion movil</option>
-                                        <option value="ENTERPRISE">Software empresarial</option>
-                                        <option value="DATABASE">Base de datos</option>
-                                    </select>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="mensaje" class="form-label">Mensaje</label>
-                                    <textarea class="form-control" 
-                                                name="mensaje" 
-                                                id="mensaje" 
-                                                rows="5"></textarea>
-                                </div>
-                            
-                                <button
-                                    type="reset"
-                                    name="borrar"
-                                    id="borrar"
-                                    class="btn btn-danger"
-                                >
-                                    Borrar
-                                </button>
-
-
-                                <button
-                                    type="submit"
-                                    style="float: right;"
-                                    name="enviar"
-                                    id="enviar"
-                                    class="btn btn-danger"
-                                >
-                                    Enviar
-                                </button>
-
-                            </form>
-
-
-                            <!--form action="conectar.php" method="POST">
-                                <div class="mb-3">
-                                    <label for="name" class="form-label">Name</label>
-                                    <input type="text" class="form-control" id="name" name="nombre" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="email" name="email" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="message" class="form-label">Message</label>
-                                    <textarea class="form-control" id="message" name="mensaje" rows="3" required></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Send</button>
-                            </form-->
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
                         </div>
-                    </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="mensaje" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send</button>
                 </div>
+            </div>
+            
+            <div class="w-100 p-5 bg-body-secondary text-center rounded-3" style="height: 60vh;">
+                <br />
+                <p class="mb-3">Feel free to reach out to me for any inquiries or collaborations.</p>
+                <br />
+                <a class="btn btn-primary" href="#" role="button">Contact Me</a>
             </div>
         </main>
         <footer class="bg-light py-3">
