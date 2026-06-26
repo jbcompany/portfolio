@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS v5.3.8 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <style>
+        .total {
+            float: right;
+            border: 5px solid black;
+            width: 275px;
+            background-color: white;
+        }
+
+        @media print {
+            @page {
+                size: landscape;
+                margin: 10mm;
+            }
+
+            body {
+                margin: 0;
+            }
+
+            .container,
+            .row,
+            .col-12 {
+                max-width: 100% !important;
+                width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            table {
+                width: 100% !important;
+                table-layout: fixed;
+                font-size: 12px;
+            }
+
+            th,
+            td {
+                padding: 4px !important;
+                word-wrap: break-word;
+            }
+
+            .total {
+                float: none;
+                margin-left: auto;
+                margin-top: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- place navbar here -->
+    </header>
+    <main>
+        <div class="bg-light">
+            <h1 style="background-color: blue; 
+                    color: white; 
+                    text-align: center;
+                    vertical-align: middle;
+                    line-height: 150px;
+                    height: 150px;">
+                Planifica tu mercado semanal</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <table class="table table-bordered border-dark " style="margin-top: 100px;">
+                            <tbody>
+                                <tr class="table-success">
+                                    <th>PRODUCTOS</th>
+                                    <th>Lunes</th>
+                                    <th>Martes</th>
+                                    <th>Miércoles</th>
+                                    <th>Jueves</th>
+                                    <th>Viernes</th>
+                                    <th>Sábado</th>
+                                    <th>Domingo</th>
+                                    <th>Total</th>
+                                </tr>
+
+                                <tr>
+                                    <td>Productos Perecederos</td>
+                                    <td id="demo"></td>
+                                    <td id="demo2"></td>
+                                    <td id="demo4"></td>
+                                    <td id="demo6"></td>
+                                    <td id="demo8"></td>
+                                    <td id="demo10"></td>
+                                    <td id="demo12"></td>
+                                    <td id="demo14"></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Productos no perecederos</td>
+                                    <td id="demo1"></td>
+                                    <td id="demo3"></td>
+                                    <td id="demo5"></td>
+                                    <td id="demo7"></td>
+                                    <td id="demo9"></td>
+                                    <td id="demo11"></td>
+                                    <td id="demo13"></td>
+                                    <td id="demo15"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                        <div class="total">
+                            <h4><b>TOTAL:</b><span id="demo16"
+                                    style="font-family: 'Courier New', Courier, monospace;font-size: 5px;">
+
+                                </span></h4>
+                        </div>
+
+                        <button class="btn btn-primary" type="button" onclick="mercado()">Calcular </button>
+                        <button class="btn btn-primary" type="button" onclick="window.print()">Imprimir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="funciones.js"></script>
+
+</body>
+
+</html>
