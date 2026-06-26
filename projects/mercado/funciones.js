@@ -1,57 +1,42 @@
 function mercado(){
+	const dias = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"];
+	const celdasPerecederos = ["demo", "demo2", "demo4", "demo6", "demo8", "demo10", "demo12"];
+	const celdasNoPerecederos = ["demo1", "demo3", "demo5", "demo7", "demo9", "demo11", "demo13"];
+	const gastosPerecederos = [];
+	const gastosNoPerecederos = [];
 
-let perecederos;
-let no_perecederos;
-let lunes,martes,miercoles,jueves,viernes,sabado,domingo;
-let lunes1,martes1,miercoles1,jueves1,viernes1,sabado1,domingo1;
-let total;
+	function pedirNumero(mensaje) {
+		while (true) {
+			const entrada = prompt(mensaje);
+			if (entrada === null || entrada.trim() === "") {
+				return 0;
+			}
 
-lunes=prompt("que gasto tendra tu el lunes en productos perecederos");
-lunes1=prompt("y en productos no perecederos");
-document.getElementById("demo").innerHTML=lunes +" €";
-document.getElementById("demo1").innerHTML=lunes1 + " €";
+			const valor = Number(entrada.replace(",", "."));
+			if (!Number.isNaN(valor)) {
+				return valor;
+			}
 
-martes=prompt("y el martes");
-martes1=prompt("y en productos no perecederos");
-document.getElementById("demo2").innerHTML=martes +" €";
-document.getElementById("demo3").innerHTML=martes1 + " €";
+			alert("Introduce un número válido. Ejemplos: 10, 10.5 o 10,5");
+		}
+	}
 
-miercoles=prompt("dime y el miercoles");
-miercoles1=prompt(" y en productos no perecederos");
-document.getElementById("demo4").innerHTML=miercoles +" €";
-document.getElementById("demo5").innerHTML=miercoles1 + " €";
+	for (let i = 0; i < dias.length; i++) {
+		const perecederos = pedirNumero(`¿Qué gasto tendrás el ${dias[i]} en productos perecederos?`);
+		const noPerecederos = pedirNumero(`¿Y en productos no perecederos el ${dias[i]}?`);
 
-jueves=prompt("el jueves es un buen dia para comprar");
-jueves1=prompt("no olvides las lentejas de no perecederos");
-document.getElementById("demo6").innerHTML=jueves +" €";
-document.getElementById("demo7").innerHTML=jueves1 + " €";
+		gastosPerecederos.push(perecederos);
+		gastosNoPerecederos.push(noPerecederos);
 
-viernes=prompt("llego el viernes");
-viernes1=prompt("y en productos no perecederos");
-document.getElementById("demo8").innerHTML=viernes +" €";
-document.getElementById("demo9").innerHTML=viernes1 + " €";
+		document.getElementById(celdasPerecederos[i]).innerHTML = `${perecederos} €`;
+		document.getElementById(celdasNoPerecederos[i]).innerHTML = `${noPerecederos} €`;
+	}
 
-sabado=prompt("Hoy sabado libre que compraras hoy ");
-sabado1=prompt("y en productos no perecederos");
-document.getElementById("demo10").innerHTML=sabado +" €";
-document.getElementById("demo11").innerHTML=sabado1 + " €";
+	const perecederosTotal = gastosPerecederos.reduce((acum, valor) => acum + valor, 0);
+	const noPerecederosTotal = gastosNoPerecederos.reduce((acum, valor) => acum + valor, 0);
+	const total = perecederosTotal + noPerecederosTotal;
 
-domingo=prompt("Feliz domingo, que comprar hoy");
-domingo1=prompt("y en productos no perecederos");
-document.getElementById("demo12").innerHTML=domingo +" €";
-document.getElementById("demo13").innerHTML=domingo1 + " €";
-
-perecederos=Number(lunes)+Number(martes)+Number(miercoles)+Number(jueves)+Number(viernes)+Number(sabado)+Number(domingo);
-
-document.getElementById("demo14").innerHTML="<h1>" +     perecederos + " €" +"</h1>";
-
-no_perecederos=Number(lunes1)+Number(martes1)+Number(miercoles1)+Number(jueves1)+Number(viernes1)+Number(sabado1)+Number(domingo1);
-
-
-document.getElementById("demo15").innerHTML= "<h1>" + no_perecederos + " €" +"</h1>";
-
-total=Number(perecederos)+Number(no_perecederos);
-document.getElementById("demo16").innerHTML= "<h1>" + total+ " €" +"</h1>";
-
-
+	document.getElementById("demo14").innerHTML = `<h1>${perecederosTotal} €</h1>`;
+	document.getElementById("demo15").innerHTML = `<h1>${noPerecederosTotal} €</h1>`;
+	document.getElementById("demo16").innerHTML = `<h1>${total} €</h1>`;
 }
